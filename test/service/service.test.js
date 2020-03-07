@@ -9,7 +9,7 @@ describe('quantity measurement service test cases', function(){
             unitValue:12
         }
         it('given correct object of inch value should return 1 feet',function(){
-            var feet=service.unitMeasurement(data1,(err,data)=>{
+            service.unitMeasurement(data1,(err,data)=>{
                 if(err){
                     console.log(err);
                 }
