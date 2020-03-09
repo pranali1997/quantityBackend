@@ -49,7 +49,6 @@ console.log(req.body);
             console.log("controller",req.params.key);
             
             service.getUnits(obj,(err,data)=>{
-                console.log(obj,'sdjfkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk');
 
                 if(err){
                     response={
@@ -58,12 +57,7 @@ console.log(req.body);
                     }                    
                     res.status(500).send(response);
                 }else{
-                    // response={
-                    //     success:"true",
-                    //     message:"successfully calculated",
-                    //     data:data
-                    // }
-                    // console.log("Response for finding data is --->",response);
+                   
                     res.status(200).send({data})
                 }
             })
