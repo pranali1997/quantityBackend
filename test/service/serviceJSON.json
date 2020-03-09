@@ -1,0 +1,8 @@
+{
+    "nullFieldInput": {
+        "unit":"LENGTH",
+        "firstUnit":"INCH",
+        "secondUnit":"FEET",
+        "unitValue":12
+    }
+}

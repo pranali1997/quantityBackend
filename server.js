@@ -13,7 +13,9 @@ app.use(cors())
 require('./main/source/routes/routes')(app)
 
 //listening to request
-app.listen(4000, () => {
+var server=app.listen(4000, () => {
     console.log("server is listening on port 4000");
 
 });
+
+module.exports=server;

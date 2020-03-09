@@ -1,7 +1,7 @@
 module.exports = {
     getUnitValues() {
         var unitTypes = {
-            "0": {
+            "LENGTH": {
                 "INCH":
                 {
                     "FEET": 12,
@@ -30,7 +30,7 @@ module.exports = {
                     "CENTIMETER": 1
                 }
             },
-            "1": {
+            "VOLUME": {
                 "GALLON": {
                     "GALLON": 1,
                     "LITRE": 0.264172,
@@ -47,7 +47,7 @@ module.exports = {
                     "MILLILITER": 1
                 }
             },
-            "2": {
+            "MASS": {
                 "KILOGRAM":
                 {
                     "GRAM": 0.001,
@@ -65,7 +65,7 @@ module.exports = {
                     "TONNE": 1
                 }
             },
-            "3": {
+            "TEMPERATURE": {
                 "FAHRENHEIT": {
                     "FAHRENHEIT": 1,
                     "CELSIUS": 0.4716
