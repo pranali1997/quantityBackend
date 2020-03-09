@@ -1,5 +1,17 @@
 {
     "nullFieldInput": {
+        "unit":null,
+        "firstUnit":null,
+        "secondUnit":null,
+        "unitValue":0
+    },
+    "noFieldInput":{
+        "unit":"",
+        "firstUnit":"",
+        "secondUnit":"",
+        "unitValue":0
+    },
+    "correctFieldInput":{
         "unit":"LENGTH",
         "firstUnit":"INCH",
         "secondUnit":"FEET",
