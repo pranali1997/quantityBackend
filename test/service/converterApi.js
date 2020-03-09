@@ -15,7 +15,7 @@ describe('api checking', () => {
             .post('/enterValue')
             .send(fileInfo.nullFieldInput)
             .end((err, res) => {
-                res.should.have.status(422);
+                res.should.have.status(500);
                 done();
             })
     })
