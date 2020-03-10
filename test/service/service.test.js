@@ -14,7 +14,6 @@ describe('quantity measurement service test cases', function(){
                 if(err){
                     console.log(err);
                 }
-
                 data=Math.round(data)
                 assert.equal(data,1)
             })
@@ -32,8 +31,7 @@ describe('quantity measurement service test cases', function(){
             var noValue=service.unitMeasurement(data2,(err,data)=>{
                 if(err){
                     console.log(err);
-                }
-                
+                } 
             })
             assert(data2,undefined)
         })
@@ -51,8 +49,7 @@ describe('quantity measurement service test cases', function(){
             var noValue=service.unitMeasurement(data2,(err,data)=>{
                 if(err){
                     console.log(err);
-                }
-                
+                } 
             })
             assert(data2,undefined)
         })
@@ -61,7 +58,7 @@ describe('quantity measurement service test cases', function(){
 
     describe('data with wrong value',function(){
         data2={
-            unit:"MASS",
+            unit:"TEMPERATURE",
             firstUnit:"KILOGRAM",
             secondUnit:"GRAM",
             unitValue:1
@@ -70,8 +67,25 @@ describe('quantity measurement service test cases', function(){
             var noValue=service.unitMeasurement(data2,(err,data)=>{
                 if(err){
                     console.log(err);
+                }  
+            })
+            assert(data2,undefined)
+        })
+
+    }),
+
+    describe('data with one wrong unit type',function(){
+        data2={
+            unit:"TEMPERATURE",
+            firstUnit:"FAHRENHEIT",
+            secondUnit:"GRAM",
+            unitValue:1
+        }
+        it('given one wrong unit type value should return err',function(){
+            var noValue=service.unitMeasurement(data2,(err,data)=>{
+                if(err){
+                    console.log(err);
                 }
-                
             })
             assert(data2,undefined)
         })

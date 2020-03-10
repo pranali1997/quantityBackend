@@ -16,5 +16,11 @@
         "firstUnit":"INCH",
         "secondUnit":"FEET",
         "unitValue":12
+    },
+    "wrongUnit":{
+        "unit":"LENGTH",
+        "firstUnit":"KILOGRAM",
+        "secondUnit":"GRAM",
+        "unitValue":1
     }
 }

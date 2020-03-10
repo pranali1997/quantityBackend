@@ -9,9 +9,27 @@ module.exports = {
         var input = obj.input;
         var result;
 
+        if(unit == undefined || unitType1==undefined || unitType2==undefined || input==undefined)
+        {
+            console.log("data should not be empty");
+        }
+        if(unit==null || unitType1==null || unitType2==null || input==null){
+            console.log("data should not be null");            
+        }
+        if(NaN(input)){
+            console.log('value must be a number');
+        }
 
+        result = quantityJSON.getUnitValues()[unit][unitType2][unitType1] * input
 
-        var result = quantityJSON.getUnitValues()[unit][unitType2][unitType1] * input
+        if(unit=="TEMPERATURE" && unitType2=="FAHRENHEIT"){
+            result=(input-32)*5/9
+         }
+ 
+         if(unit=="TEMPERATURE" && unitType2=="CELSIUS"){
+             result=(input*9/5)-32
+         }
+        
         return callback(null, result);
     },
 
